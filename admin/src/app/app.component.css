@@ -1,0 +1,11 @@
+router-outlet {
+  width: 0%;
+  height: 0%;
+}
+.layout {
+  display: flex;
+}
+
+.nav-bar {
+  flex-basis: 15%;
+}
