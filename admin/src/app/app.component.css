@@ -1,0 +1,15 @@
+router-outlet {
+    width: 0%;
+    height: 0%;
+  }
+  .layout {
+    width: 100vh;
+    height: 100vh;
+  }
+  
+  .nav-bar {
+    flex: 1%;
+  }
+.main-content{
+    padding-top: 10%;
+}
