@@ -16,10 +16,11 @@ import { MatNativeDateModule } from '@angular/material/core';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { CreateCapacityDayComponent } from './create-capacity-day/create-capacity-day.component';
+import { ReservationsComponent } from './reservations/reservations.component';
 
 
 @NgModule({
-  declarations: [AppComponent, ParksComponent, LayoutComponent, CreateParkComponent, CapacityParkComponent, CreateCapacityDayComponent],
+  declarations: [AppComponent, ParksComponent, LayoutComponent, CreateParkComponent, CapacityParkComponent, CreateCapacityDayComponent, ReservationsComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

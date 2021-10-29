@@ -1,0 +1,29 @@
+<div class="container-resrvations">
+  <div class="reservastions-title-container">
+    <h2 class="main-title">Reservations</h2>
+  </div>
+  <body>
+    <form>
+      <div class="options-make-reservation">
+        <div class="form-group option-park">
+          <label for="park">Park</label>
+          <select name="parks" id="park" size="1" class="form-select parks-select">
+            <option selected disabled hidden>Select</option>
+            <option value="1">Park One</option>
+          </select>
+        </div>
+        <div class="form-group option-date">
+          <label for="park-date">Date</label>
+          <div class="input-group col-10">
+            <input class="form-control inputbox calender-box" type="text" id="park-date" matInput [matDatepicker]="picker" />
+            <mat-datepicker-toggle matSuffix [for]="picker" class="btn btn-primary boton"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </div>
+        </div>
+        <div class="button-container">
+          <button type="button" class="btn btn-primary button-search">Search</button>
+        </div>
+      </div>
+    </form>
+  </body>
+</div>

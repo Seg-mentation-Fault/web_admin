@@ -1,7 +1,15 @@
-nav{
+nav {
   background-color: rgb(53, 53, 53);
   color: white;
 }
-.navbar-toggler-icon{
-  color: aliceblue !important; 
+.navbar-toggler-icon {
+  color: aliceblue !important;
+}
+
+.menu-offcanva {
+  font-size: 35px;
+}
+
+.options-nav {
+  font-size: 16px;
 }
