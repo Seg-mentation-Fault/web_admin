@@ -1,0 +1,26 @@
+<div class="title">
+    <h1 class="text">Day Capacity</h1>
+</div>
+<div class="container box">
+    
+	<div class="col-10 form">
+        <label for="exampleFormControlInput1" class="form-label" style="font-size: 20px;">Date</label>
+		<div class="input-group col-10 " >
+			<input  class="form-control inputbox" type="text" id="inlineFormInputGroupUsername" placeholder="Dateofcapacity" matInput [matDatepicker]="picker" >
+            <mat-datepicker-toggle matSuffix [for]="picker"  class="btn btn-primary boton"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+		</div>
+        <br>
+        <label for="exampleFormControlInput1" class="form-label" style="font-size: 20px;">Capacity Day</label>
+        <div>
+            <input class="form-control form-control-lg" type="number" placeholder="Capacity" aria-label=".form-control-lg example">
+        </div>
+        <br>
+        <div class="boxbtn">
+            <button type="button" class="btn btn-primary btnconfirm">Create</button>
+        </div>
+
+	</div>
+
+
+</div>

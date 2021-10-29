@@ -1,0 +1,26 @@
+.title{
+    margin: 2% 0% 0% 7.5%;
+}
+
+.box{
+    margin: 5% 0% 0% 20%;
+}
+
+.text{
+    font-size: 50px;
+}
+.boxbtn{
+    justify-content: center;
+}
+.btnconfirm{
+    margin: 0% 0% 0% 40%;
+    width: 200px;
+}
+
+.inputbox{
+    height: 50px;
+}
+
+.boton{
+    height: 49px;
+}
