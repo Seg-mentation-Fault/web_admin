@@ -14,12 +14,14 @@
 }
 
 .title-capacity {
+  font-size: 35px;
   margin-left: 50px;
 }
 
 .title-park {
   margin-top: 4px;
   margin-left: 50px;
+  font-size: 25px;
 }
 
 .create-capacity {
@@ -57,9 +59,11 @@
 }
 
 .date-card {
+  font-size: 22px;
   margin-bottom: 10px;
 }
 .capacity-day {
+  font-size: 18px;
   margin-bottom: 30px;
   color: rgb(53, 53, 53);
 }
