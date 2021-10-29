@@ -9,15 +9,8 @@ import { LayoutComponent } from './layout/layout.component';
 import { SidebarModule } from 'ng-sidebar';
 
 @NgModule({
-  declarations: [
-    AppComponent, 
-    ParksComponent, LayoutComponent
-  ],
-  imports: [
-    BrowserModule, 
-    AppRoutingModule,
-    SidebarModule.forRoot(),
-  ],
+  declarations: [AppComponent, ParksComponent, LayoutComponent],
+  imports: [BrowserModule, AppRoutingModule, SidebarModule.forRoot()],
   providers: [],
   bootstrap: [AppComponent],
 })

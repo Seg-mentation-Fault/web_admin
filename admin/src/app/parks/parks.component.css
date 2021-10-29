@@ -1,0 +1,68 @@
+* {
+  margin: 0%;
+  padding: 0%;
+}
+
+.container-parks {
+  min-height: 100%;
+  width: 100%;
+  /* background-color: red; */
+}
+.container-create-parks {
+  display: flex;
+  justify-content: space-between;
+}
+
+.title-park {
+  margin-left: 50px;
+}
+
+.create-park {
+  padding: 0px 17px 0px 17px;
+  margin-right: 50px;
+}
+
+.views-parks {
+  margin: 20px 80px 20px 80px;
+  min-height: 50vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.card-parks {
+  background-color: #e9ecef;
+  min-width: 300px;
+  max-width: 300px;
+  max-height: 200px;
+  min-height: 200px;
+  /* border: 1px solid #97a3b1; */
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgb(168, 196, 212);
+  padding: 15px 15px 15px 15px;
+  margin: 30px 40px 30px 40px;
+}
+.description-parks {
+  margin-top: 18px;
+}
+
+.capacity-park {
+  color: rgb(53, 53, 53);
+}
+
+.edit-buttom {
+  padding: 2px 20.12px 2px 20.13px;
+  /* margin-right: 125px;
+  margin-left: 5px; */
+}
+
+.capacity-buttom {
+  padding: 2px 5px 2px 5px;
+}
+
+.container-btn-parks {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
