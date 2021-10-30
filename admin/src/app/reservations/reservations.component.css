@@ -16,7 +16,7 @@
 body {
   margin: 50px 0px 2px 82px;
   padding: 15px;
-  background-color: #f6f6f6;
+  /* background-color: #f6f6f6; */
   border-radius: 5px;
   box-shadow: 0px 0px 10px rgb(168, 196, 212);
   width: 87%;
@@ -50,12 +50,14 @@ label {
 
 .button-container {
   height: 100%;
-  margin: 0px 0px 5px 700px;
+  margin-left: auto;
+  margin-right: -45px;
+  /* margin: 0px 0px 5px 700px; */
   width: 200px;
 }
 
 .button-search {
-  padding: 10px 10px;
+  padding: 8px 10px;
   font-size: 20px;
 }
 
@@ -63,3 +65,44 @@ label {
   /* width: 80px; */
   padding-left: 8px;
 }
+
+.display-reservations {
+  margin: 20px auto;
+  width: 88%;
+  height: 62vh;
+  background-color: #f6f6f6;
+  border-radius: 5px;
+}
+
+.tableFixHead {
+  margin: 0px auto;
+  width: 95%;
+  overflow: auto;
+  height: 300px;
+}
+.tableFixHead thead th {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+/* Just common table stuff. Really. */
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+th,
+td {
+  padding: 8px 16px;
+}
+
+.summary-reservation {
+  margin: 30px auto;
+  display: flex;
+  justify-content: space-around;
+}
+
+.summary-reservation h3 {
+  font-size: 23px;
+}
+
