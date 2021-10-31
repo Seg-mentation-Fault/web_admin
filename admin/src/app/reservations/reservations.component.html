@@ -3,25 +3,25 @@
     <h2 class="main-title">Reservations</h2>
   </div>
   <body>
-    <form>
+    <form (ngSubmit)="onSubmit()">
       <div class="options-make-reservation">
         <div class="form-group option-park">
           <label for="park">Park</label>
-          <select name="parks" id="park" size="1" class="form-select parks-select">
+          <select name="park" [(ngModel)]="park" id="park" size="1" class="form-select parks-select">
             <option selected disabled hidden>Select</option>
-            <option value="1">Park One</option>
+            <option *ngFor="let park of parks" value="{{ park.id }}">{{ park.name }}</option>
           </select>
         </div>
         <div class="form-group option-date">
           <label for="park-date">Date</label>
           <div class="input-group col-10">
-            <input class="form-control inputbox calender-box" type="text" id="park-date" matInput [matDatepicker]="picker" />
+            <input name="date" [(ngModel)]="date" class="form-control inputbox calender-box" type="text" id="park-date" matInput [matDatepicker]="picker" />
             <mat-datepicker-toggle matSuffix [for]="picker" class="btn btn-primary boton"></mat-datepicker-toggle>
             <mat-datepicker #picker></mat-datepicker>
           </div>
         </div>
         <div class="button-container">
-          <button type="button" class="btn btn-primary button-search">Search</button>
+          <button type="submit" class="btn btn-primary button-search">Search</button>
         </div>
       </div>
     </form>
@@ -38,19 +38,19 @@
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <th scope="row">2</th>
-              <td>Mark</td>
-              <td>hola</td>
-              <td>@mdo</td>
+            <tr *ngFor="let reservation of reservations">
+              <th scope="row">{{ reservation.numOfGuests }}</th>
+              <td>{{ reservation.name }}</td>
+              <td>{{ reservation.email }}</td>
+              <td>{{ reservation.confirmCode }}</td>
             </tr>
           </tbody>
         </table>
       </div>
       <div class="summary-reservation">
-        <h3>capacity day: <b>2000</b></h3>
-        <h3>Guests: <b>2</b></h3>
-        <h3>Remain Capacity: <b>1998</b></h3>
+        <h3>capacity day: <b>{{  summary.capacityDay }}</b></h3>
+        <h3>Guests: <b>{{  summary.ConfirmGuest }}</b></h3>
+        <h3>Remain Capacity: <b>{{  summary.remainingCapacity }}</b></h3>
       </div>
     </div>
   </body>
