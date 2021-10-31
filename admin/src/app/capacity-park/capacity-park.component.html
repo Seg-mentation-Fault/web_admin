@@ -1,16 +1,18 @@
-<div class="container-capacities">
+<div class="container-capacities" *ngIf="!isLoading || isEmpty">
   <div class="container-create-capacity">
     <div class="titles-capacity">
       <H2 class="title-capacity">Capacity Park</H2>
-      <h4 class="title-park">Park One</h4>
+      <h4 class="title-park">{{ parkName }}</h4>
     </div>
-    <button type="button" class="btn btn-primary create-capacity">New Capacity Day</button>
+    <a routerLink="/capacity-park/{{ id }}/create">
+      <button type="button" class="btn btn-primary create-capacity">New Capacity Day</button>
+    </a>
   </div>
   <div class="views-capacity">
-    <div class="card-capacity">
+    <div class="card-capacity" *ngFor="let capacityDay of capacityDays">
       <div class="card-capacity-body">
-        <h5 class="date-card">Date: 2021-10-21</h5>
-        <h6 class="capacity-day">Capacity: 2000</h6>
+        <h5 class="date-card">Date: {{ capacityDay.date }}</h5>
+        <h6 class="capacity-day">Capacity: {{ capacityDay.dayCapacity }}</h6>
         <div class="container-btn-parks">
           <a href="#">
             <button type="button" class="edit-buttom btn btn-primary">Edit Capacity</button>
@@ -19,4 +21,7 @@
       </div>
     </div>
   </div>
+</div>
+<div class="loading-page" *ngIf="isLoading">
+  <h3>Loading...</h3>
 </div>
