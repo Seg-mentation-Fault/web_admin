@@ -12,7 +12,7 @@ const routes: Routes = [
   { path: 'parks', component: ParksComponent },
   { path: 'create-parks', component: CreateParkComponent },
   { path: 'capacity-park/:id', component: CapacityParkComponent },
-  { path: 'capacity-park/:id/create', component: CreateCapacityDayComponent },
+  { path: 'capacity-park/:id/create', component: CreateCapacityDayComponent, pathMatch: 'full' },
 ];
 
 @NgModule({

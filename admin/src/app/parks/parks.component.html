@@ -1,19 +1,21 @@
 <div class="container-parks">
   <div class="container-create-parks">
     <H2 class="title-park">Parks</H2>
-    <button type="button" class="btn btn-primary create-park">Create Park</button>
+    <a routerLink="/create-parks">
+      <button type="button" class="btn btn-primary create-park">Create Park</button>
+    </a>
   </div>
   <div class="views-parks">
-    <div class="card-parks">
+    <div class="card-parks" *ngFor="let park of parks">
       <div class="card-parks-body">
-        <h5 class="park-name">Park One</h5>
-        <h6 class="capacity-park">3000</h6>
-        <p class="description-parks">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <h5 class="park-name">{{ park.name }}</h5>
+        <h6 class="capacity-park">{{ park.capacity }}</h6>
+        <p class="description-parks">{{ park.description }}</p>
         <div class="container-btn-parks">
           <a href="#">
             <button type="button" class="edit-buttom btn btn-primary">Edit Park</button>
           </a>
-          <a href="#">
+          <a routerLink="/capacity-park/{{ park.id }}">
             <button type="button" class="capacity-buttom btn btn-primary">Capacity Day</button>
           </a>
         </div>
