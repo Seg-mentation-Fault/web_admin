@@ -18,7 +18,6 @@ export class CreateParkComponent implements OnInit {
 
   onSubmit() {
     this.httpBack.createPark(this.name, this.capacity, this.description).subscribe((park) => {
-      alert(` the following park: ${park.name} was created`);
       this.router.navigateByUrl('/parks');
     });
   }

@@ -1,7 +1,7 @@
 export interface CapacityDay {
   date: string;
   dayCapacity: number;
-  name: string;
+  name?: string;
   ParkId: number;
   createdAt?: string;
   updatedAt?: string;

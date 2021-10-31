@@ -13,7 +13,7 @@ export class CapacityParkComponent implements OnInit {
   id: string | null;
   isLoading: boolean = true;
   capacityDays: CapacityDay[];
-  parkName: string;
+  parkName: any;
 
   constructor(private httpBack: HttpBackService, private route: ActivatedRoute) {}
 

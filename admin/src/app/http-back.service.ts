@@ -39,4 +39,19 @@ export class HttpBackService {
       httpOptions
     );
   }
+  createCapacityDay(
+    parkId: string | null,
+    date: string,
+    capacityDay: number
+  ): Observable<CapacityDay> {
+    return this.http.post<CapacityDay>(
+      'http://3.93.222.241:3000/api/v1/parkcapacity',
+      {
+        ParkId: parkId,
+        date,
+        dayCapacity: capacityDay,
+      },
+      httpOptions
+    );
+  }
 }
