@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CapacityDay } from '../interfaces/capacityDay';
-import { HttpBackService } from '../http-back.service';
+import { HttpBackService } from '../services/http-back.service';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { HttpBackService } from '../http-back.service';
+import { HttpBackService } from '../services/http-back.service';
 import * as moment from 'moment';
 
 @Component({

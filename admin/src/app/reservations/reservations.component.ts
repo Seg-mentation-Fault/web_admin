@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import * as moment from 'moment';
-import { HttpBackService } from '../http-back.service';
+import { HttpBackService } from '../services/http-back.service';
 import { Parks } from '../interfaces/park';
 import { Reservations } from '../interfaces/reservations';
 import { ReservationSummary } from '../interfaces/parkDaySummary';

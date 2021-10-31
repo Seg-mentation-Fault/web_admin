@@ -1,10 +1,10 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable, observable } from 'rxjs';
-import { Parks } from './interfaces/park';
-import { CapacityDay } from './interfaces/capacityDay';
-import { Reservations } from './interfaces/reservations';
-import { ReservationSummary } from './interfaces/parkDaySummary';
+import { Parks } from '../interfaces/park';
+import { CapacityDay } from '../interfaces/capacityDay';
+import { Reservations } from '../interfaces/reservations';
+import { ReservationSummary } from '../interfaces/parkDaySummary';
 
 const httpOptions = {
   headers: new HttpHeaders({ 'content-type': 'application/json' }),

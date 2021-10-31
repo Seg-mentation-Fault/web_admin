@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Parks } from '../interfaces/park';
-import { HttpBackService } from '../http-back.service';
+import { HttpBackService } from '../services/http-back.service';
 
 @Component({
   selector: 'app-parks',
