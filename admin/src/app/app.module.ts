@@ -19,6 +19,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { CreateCapacityDayComponent } from './create-capacity-day/create-capacity-day.component';
 import { ReservationsComponent } from './reservations/reservations.component';
+import { EditParkComponent } from './edit-park/edit-park.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { ReservationsComponent } from './reservations/reservations.component';
     CapacityParkComponent,
     CreateCapacityDayComponent,
     ReservationsComponent,
+    EditParkComponent,
   ],
   imports: [
     BrowserModule,

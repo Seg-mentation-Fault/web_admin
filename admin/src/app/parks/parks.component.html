@@ -12,8 +12,8 @@
         <h6 class="capacity-park">{{ park.capacity }}</h6>
         <p class="description-parks">{{ park.description }}</p>
         <div class="container-btn-parks">
-          <a href="#">
-            <button type="button" class="edit-buttom btn btn-primary">Edit Park</button>
+          <a routerLink="/edit-parks/{{ park.id }}">
+            <button type="button" class="edit-buttom btn btn-primary" (click)="sendEdit(park)">Edit Park</button>
           </a>
           <a routerLink="/capacity-park/{{ park.id }}">
             <button type="button" class="capacity-buttom btn btn-primary">Capacity Day</button>

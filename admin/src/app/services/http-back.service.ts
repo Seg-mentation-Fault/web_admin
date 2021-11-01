@@ -78,4 +78,22 @@ export class HttpBackService {
       httpOptions
     );
   }
+
+  updateParks(
+    name: string,
+    capacity: number,
+    id: string | null,
+    description?: string
+  ): Observable<Parks> {
+    return this.http.put<Parks>(
+      'http://3.93.222.241:3000/api/v1/parks',
+      {
+        id,
+        name,
+        capacity,
+        description,
+      },
+      httpOptions
+    );
+  }
 }

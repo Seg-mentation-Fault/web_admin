@@ -12,6 +12,9 @@
     </a>
   </div>
   <div class="views-capacity">
+    <div *ngIf="isEmpty" class="is-empy-box">
+      <h4>Start by creating a New Capacity Day</h4>
+    </div>
     <div class="card-capacity" *ngFor="let capacityDay of capacityDays">
       <div class="card-capacity-body">
         <h5 class="date-card">Date: {{ capacityDay.date }}</h5>
