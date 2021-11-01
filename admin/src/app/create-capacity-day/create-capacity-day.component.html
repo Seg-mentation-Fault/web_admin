@@ -1,23 +1,30 @@
-<div class="title">
-  <h1 class="text">Day Capacity</h1>
-</div>
 <div class="container box">
-  <div class="col-10 form">
-    <form (ngSubmit)="onSubmit()">
+  <div class="title">
+    <h2 class="text">Create Day Capacity</h2>
+  </div>
+  <div class="form">
+    <form #wholeForm="ngForm" (ngSubmit)="onSubmit()">
       <label for="exampleFormControlInput1" class="form-label" style="font-size: 20px">Date</label>
       <div class="input-group col-10">
-        <input name="date" [(ngModel)]="date" class="form-control inputbox" type="text" id="inlineFormInputGroupUsername" placeholder="Dateofcapacity" matInput [matDatepicker]="picker" />
+        <input required name="date" [(ngModel)]="date" #propertyDate="ngModel" class="form-control inputbox" type="text" id="inlineFormInputGroupUsername" placeholder="Dateofcapacity" matInput [matDatepicker]="picker" />
         <mat-datepicker-toggle matSuffix [for]="picker" class="btn btn-primary boton"></mat-datepicker-toggle>
         <mat-datepicker #picker></mat-datepicker>
+      </div>
+      <div class="alert alert-danger" *ngIf="propertyDate.touched && !propertyDate.valid">
+        <div *ngIf="propertyDate?.errors?.required">Date is required</div>
       </div>
       <br />
       <label for="exampleFormControlInput1" class="form-label" style="font-size: 20px">Capacity Day</label>
       <div>
-        <input name="capacityDay" [(ngModel)]="capacityDay" class="form-control form-control-lg" type="number" placeholder="Capacity" aria-label=".form-control-lg example" />
+        <input required name="capacityDay" [(ngModel)]="capacityDay" #propertyCapacity="ngModel" class="form-control form-control-lg capacity-input" type="number" placeholder="Type the number for park capacity day" aria-label=".form-control-lg example" />
+        <div class="alert alert-danger" *ngIf="(propertyCapacity.touched && !propertyCapacity.valid) || propertyCapacity?.value < 1">
+          <div *ngIf="propertyCapacity?.errors?.required">The Capacity for the day is required</div>
+          <div *ngIf="propertyCapacity?.value < 1">The Capacity day number should be above 0</div>
+        </div>
       </div>
       <br />
       <div class="boxbtn">
-        <button type="submit" class="btn btn-primary btnconfirm">Create</button>
+        <button type="submit" [disabled]="!wholeForm.valid" class="btn btn-primary btnconfirm">Create</button>
       </div>
     </form>
   </div>
