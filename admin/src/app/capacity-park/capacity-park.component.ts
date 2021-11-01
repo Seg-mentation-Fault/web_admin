@@ -13,18 +13,25 @@ export class CapacityParkComponent implements OnInit {
   id: string | null;
   isLoading: boolean = true;
   capacityDays: CapacityDay[];
-  parkName: any;
+  park: any;
 
   constructor(private httpBack: HttpBackService, private route: ActivatedRoute) {}
 
   ngOnInit(): void {
     this.id = this.route.snapshot.paramMap.get('id');
+    this.httpBack.getParks().subscribe((parks) => {
+      for (let count of parks) {
+        if (String(count.id) === this.id) {
+          this.park = count;
+        }
+      }
+    });
     this.httpBack.getCapacityDayPark(this.id).subscribe((capacityDays) => {
       setTimeout(() => {
         if (capacityDays.length === 0) {
           this.isEmpty = true;
         }
-        this.parkName = capacityDays[0].name;
+        // this.parkName = capacityDays[0].name;
         this.capacityDays = capacityDays;
         this.isLoading = false;
       }, 500);

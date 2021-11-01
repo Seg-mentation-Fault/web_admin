@@ -1,17 +1,27 @@
 <div class="container">
   <h2>Create Parks</h2>
   <br />
-  <form (ngSubmit)="onSubmit()">
-    <input required name="name" [(ngModel)]="name" class="form-control form-control-lg" type="text" placeholder="Park Name" aria-label=".form-control-lg example " />
+  <form #wholeForm="ngForm" (ngSubmit)="onSubmit()">
+    <input required name="name" [(ngModel)]="name" #propertyName="ngModel" class="form-control form-control-lg" type="text" placeholder="Park Name" aria-label=".form-control-lg example " />
+    <div class="alert alert-danger" *ngIf="propertyName.touched && !propertyName.valid">
+      <div *ngIf="propertyName?.errors?.required">Name of the park is required</div>
+    </div>
     <br />
-    <input name="capacity" [(ngModel)]="capacity" class="form-control form-control-lg" type="number" placeholder="Full capacity" aria-label=".form-control-lg example" />
+    <input required name="capacity" [(ngModel)]="capacity" #propertyCapacity="ngModel" class="form-control form-control-lg" type="number" placeholder="Full capacity" aria-label=".form-control-lg example" />
+    <div class="alert alert-danger" *ngIf="(propertyCapacity.touched && !propertyCapacity.valid) || propertyCapacity?.value < 1">
+      <div *ngIf="propertyCapacity?.errors?.required">The Capacity for the park is required</div>
+      <div *ngIf="propertyCapacity?.value < 1">The Capacity number should be above 0</div>
+    </div>
     <br />
     <div class="mb-3">
       <label for="exampleFormControlTextarea1" class="form-label">Description</label>
-      <textarea name="description" [(ngModel)]="description" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+      <textarea name="description" [(ngModel)]="description" maxlength="100" #propertyDescription="ngModel" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+      <div class="alert alert-danger" *ngIf="propertyDescription.touched && !propertyDescription.valid">
+        <div *ngIf="propertyDescription?.errors?.maxlength">The maximuin length is 100 characters</div>
+      </div>
     </div>
     <div class="bt container">
-      <button type="submit" class="btn btn-primary">Create Park</button>
+      <button type="submit" [disabled]="!wholeForm.valid" class="btn btn-primary">Create Park</button>
     </div>
   </form>
 </div>
