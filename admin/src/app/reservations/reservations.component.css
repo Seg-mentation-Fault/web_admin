@@ -48,6 +48,10 @@ label {
   margin: 0px 5px 5px 5px;
 }
 
+.inputbox {
+  border: 1px solid #dadfe3;
+}
+
 .button-container {
   height: 100%;
   margin-left: auto;
@@ -105,4 +109,3 @@ td {
 .summary-reservation h3 {
   font-size: 23px;
 }
-

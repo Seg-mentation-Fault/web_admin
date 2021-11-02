@@ -96,4 +96,20 @@ export class HttpBackService {
       httpOptions
     );
   }
+
+  updateCapacityPark(
+    parkId: string | null,
+    date: string,
+    newCapacity: number
+  ): Observable<{ done: boolean }> {
+    return this.http.put<{ done: boolean }>(
+      'http://3.93.222.241:3000/api/v1/parkcapacity',
+      {
+        ParkId: parkId,
+        date,
+        dayCapacity: newCapacity,
+      },
+      httpOptions
+    );
+  }
 }

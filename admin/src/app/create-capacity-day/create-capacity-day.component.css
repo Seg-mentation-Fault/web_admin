@@ -1,5 +1,5 @@
-.text{
-    font-size: 24px;
+.text {
+  font-size: 24px;
 }
 .box {
   margin-top: 20px;
@@ -7,20 +7,24 @@
 .title {
   margin-bottom: 30px;
 }
-.boxbtn{
-    justify-content: center;
+.boxbtn {
+  justify-content: center;
 }
-.btnconfirm{
-    margin: 0% 0% 0% 40%;
-    width: 200px;
-}
-
-.inputbox{
-    height: 50px;
+.btnconfirm {
+  margin: 0% 0% 0% 40%;
+  width: 200px;
 }
 
-.boton{
-    height: 49px;
+.inputbox {
+  height: 50px;
+  border: 1px solid #dadfe3;
+}
+
+.form-control.ng-touched.ng-invalid {
+  border: 2px solid red;
+}
+.boton {
+  height: 49px;
 }
 
 .capacity-input {

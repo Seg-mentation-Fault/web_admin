@@ -20,8 +20,8 @@
         <h5 class="date-card">Date: {{ capacityDay.date }}</h5>
         <h6 class="capacity-day">Capacity Day: {{ capacityDay.dayCapacity }}</h6>
         <div class="container-btn-parks">
-          <a href="#">
-            <button type="button" class="edit-buttom btn btn-primary">Edit Capacity</button>
+          <a>
+            <button type="button" class="edit-buttom btn btn-primary" (click)="openDialog(capacityDay)">Edit Capacity</button>
           </a>
         </div>
       </div>

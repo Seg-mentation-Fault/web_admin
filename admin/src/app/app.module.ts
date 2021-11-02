@@ -10,13 +10,19 @@ import { AppComponent } from './app.component';
 import { LayoutComponent } from './layout/layout.component';
 import { ParksComponent } from './parks/parks.component';
 import { CreateParkComponent } from './create-park/create-park.component';
-import { CapacityParkComponent } from './capacity-park/capacity-park.component';
+import {
+  CapacityParkComponent,
+  DialogOverviewExampleDialog,
+} from './capacity-park/capacity-park.component';
 
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatCardModule } from '@angular/material/card';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatButtonModule } from '@angular/material/button';
+
 import { CreateCapacityDayComponent } from './create-capacity-day/create-capacity-day.component';
 import { ReservationsComponent } from './reservations/reservations.component';
 import { EditParkComponent } from './edit-park/edit-park.component';
@@ -31,6 +37,7 @@ import { EditParkComponent } from './edit-park/edit-park.component';
     CreateCapacityDayComponent,
     ReservationsComponent,
     EditParkComponent,
+    DialogOverviewExampleDialog,
   ],
   imports: [
     BrowserModule,
@@ -42,9 +49,12 @@ import { EditParkComponent } from './edit-park/edit-park.component';
     MatNativeDateModule,
     MatFormFieldModule,
     MatInputModule,
+    MatDialogModule,
+    MatButtonModule,
     FormsModule,
     HttpClientModule,
   ],
+  entryComponents: [DialogOverviewExampleDialog],
   providers: [],
   bootstrap: [AppComponent],
 })
