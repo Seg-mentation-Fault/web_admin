@@ -1,4 +1,30 @@
-<div class="layout">
+<div class="container-log-in" *ngIf="!(auth.user | async)">
+  <div class="container-sigIn">
+    <div class="container-img">
+      <img src="../assets/logo colorido.svg" />
+    </div>
+    <h2>Access to the console</h2>
+    <div class="container-inputs">
+      <mat-form-field appearance="fill">
+        <mat-label>Enter your email</mat-label>
+        <input matInput type="email" class="inputs" placeholder="pat@example.com" name="email" [(ngModel)]="email" [formControl]="emailControl" required />
+        <mat-error *ngIf="emailControl.invalid">{{ getErrorMessageEmail() }}</mat-error>
+      </mat-form-field>
+    </div>
+    <div class="container-inputs">
+      <mat-form-field appearance="fill">
+        <mat-label>Enter your password</mat-label>
+        <input matInput class="inputs" type="password" name="password" [(ngModel)]="password" [formControl]="passControl" required />
+        <mat-error *ngIf="passControl.invalid">{{ getErrorMessagePass() }}</mat-error>
+      </mat-form-field>
+    </div>
+    <div class="container-buttom-SignIn">
+      <button mat-raised-button color="primary" class="button-logIn" [disabled]="passControl.invalid" (click)="login()">Log In</button>
+    </div>
+  </div>
+</div>
+
+<div class="layout" *ngIf="auth.user | async">
   <div class="nav-bar">
     <app-layout></app-layout>
   </div>

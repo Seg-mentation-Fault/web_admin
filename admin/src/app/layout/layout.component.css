@@ -13,3 +13,9 @@ nav {
 .options-nav {
   font-size: 16px;
 }
+
+.sign-out {
+  position: absolute;
+  right: 5%;
+  bottom: 1%;
+}
